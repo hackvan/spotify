@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <% @artists.each do |artist| %>
+        <%= image_tag artist.image_url, alt: "Foto", :title => "Foto" unless artist.image_url.blank? %>
+        <p><%= artist.name %></p>
+        <%= link_to "Ver más", artist, class: "btn btn-primary" %>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</div>
